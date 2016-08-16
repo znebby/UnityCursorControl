@@ -7,8 +7,32 @@ namespace UnityCursorControl
     /// <summary>
     /// Unit tests for CursorControl class
     /// </summary>
+    [TestFixture]
     public class CursorControlTest
     {
+
+        /// <summary>
+        /// Stores the initial cursor position
+        /// </summary>
+        private Vector2 _cursorPos;
+
+        /// <summary>
+        /// Remembers the cursor position before the tests are run
+        /// </summary>
+        [TestFixtureSetUp]
+        public void TestFixtureSetUp()
+        {
+            _cursorPos = CursorControl.GetGlobalCursorPos();
+        }
+
+        /// <summary>
+        /// Sets the cursor position back to its original position after the tests are run
+        /// </summary>
+        [TestFixtureTearDown]
+        public void TestFixtureTearDown()
+        {
+            CursorControl.SetGlobalCursorPos(_cursorPos);
+        }
 
         /// <summary>
         /// Tests GetGlobalCursorPos() and SetGlobalCursorPos()
