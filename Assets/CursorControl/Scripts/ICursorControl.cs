@@ -21,4 +21,19 @@ internal interface ICursorControl
     /// </summary>
     void SetLocalCursorPos(Vector2 pos);
 
+    /// <summary>
+    /// Simulates a left mouse down event, immediately followed by a left mouse up event
+    /// </summary>
+    void SimulateLeftClick();
+
+    /// <summary>
+    /// Simulates a middle mouse down event, immediately followed by a middle mouse up event
+    /// </summary>
+    void SimulateMiddleClick();
+
+    /// <summary>
+    /// Simulates a right mouse down event, immediately followed by a right mouse up event
+    /// </summary>
+    void SimulateRightClick();
+
 }

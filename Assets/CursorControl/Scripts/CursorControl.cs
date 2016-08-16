@@ -44,4 +44,19 @@ public static class CursorControl
     {
         _cursorControl.SetLocalCursorPos(pos);
     }
+
+    public static void SimulateLeftClick()
+    {
+        _cursorControl.SimulateLeftClick();
+    }
+
+    public static void SimulateMiddleClick()
+    {
+        _cursorControl.SimulateMiddleClick();
+    }
+
+    public static void SimulateRightClick()
+    {
+        _cursorControl.SimulateRightClick();
+    }
 }
