@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using UnityCursorControl;
 
 /// <summary>
 /// Gets/sets the global and local mouse cursor position
