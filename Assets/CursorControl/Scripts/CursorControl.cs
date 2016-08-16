@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using UnityCursorControl;
 
 /// <summary>
 /// Gets/sets the global and local mouse cursor position
@@ -43,5 +44,20 @@ public static class CursorControl
     public static void SetLocalCursorPos(Vector2 pos)
     {
         _cursorControl.SetLocalCursorPos(pos);
+    }
+
+    public static void SimulateLeftClick()
+    {
+        _cursorControl.SimulateLeftClick();
+    }
+
+    public static void SimulateMiddleClick()
+    {
+        _cursorControl.SimulateMiddleClick();
+    }
+
+    public static void SimulateRightClick()
+    {
+        _cursorControl.SimulateRightClick();
     }
 }
