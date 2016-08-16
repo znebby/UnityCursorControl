@@ -22,6 +22,7 @@ public class CursorControlExample : MonoBehaviour
     private void Update()
     {
         UpdatePositionText();
+        SimulateMouseClicks();
     }
 
     /// <summary>
@@ -31,6 +32,25 @@ public class CursorControlExample : MonoBehaviour
     {
         _globalPosText.text = "Global Cursor Position: " + CursorControl.GetGlobalCursorPos().ToString();
         _localPosText.text = "Local Cursor Position: " + ((Vector2)Input.mousePosition).ToString();
+    }
+
+    /// <summary>
+    /// Simulates mouse clicks when keyboard buttons are pressed
+    /// </summary>
+    private void SimulateMouseClicks()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            CursorControl.SimulateLeftClick();
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            CursorControl.SimulateMiddleClick();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            CursorControl.SimulateRightClick();
+        }
     }
 
     /// <summary>
